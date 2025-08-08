@@ -95,15 +95,16 @@ int insertSortedLL(LinkedList *ll, int item)
 	ListNode *cur = ll->head;
 	
 	int i = 0;
-
+	//	item 보다 작으면 전진 
 	while(cur != NULL && cur -> item < item){
 		cur = cur-> next;
 		i++;
 	}
-	
+	// 중복 체크 cur 가 가리키는 노드 값이 item 과 같으면 실패
 	if (cur != NULL && cur -> item == item){
 		return -1;
 	}
+	// 삽입하기
 	if (insertNode(ll,i, item)==0)
 		return i;
 
