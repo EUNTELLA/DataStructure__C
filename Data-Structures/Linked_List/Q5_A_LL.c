@@ -103,6 +103,7 @@ int main()
 void frontBackSplitLinkedList(LinkedList *ll, LinkedList *resultFrontList, LinkedList *resultBackList)
 {
 	/* add your code here */
+	if(ll == NULL || ll-> head == NULL)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////

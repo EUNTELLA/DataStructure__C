@@ -87,7 +87,34 @@ int main()
 void moveOddItemsToBack(LinkedList *ll)
 {
 	/* add your code here */
+	if(ll == NULL || ll -> head == NULL || ll->size ==0){
+		return ;
+	}
+	// 원래 크기 저장
+	int orginSize = ll-> size;
+	int i =0;
+
+	while (i <orginSize){
+		ListNode *node = findNode(ll,i);
+
+		if (node != NULL && node-> item % 2 == 1){
+			int oddValue = node -> item;
+			//홀수인 경우
+			removeNode(ll,i); //현재 위치에서 제거
+
+			insertNode(ll,ll->size,oddValue); //맨뒤에 추가
+			
+			orginSize--; //원래 크기 감소
+
+		}else{ //짝수인 경우
+			i++;  // 다음 인덱스로 이동
+		}
+	}
 }
+
+	
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 
