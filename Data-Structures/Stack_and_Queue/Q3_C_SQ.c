@@ -107,9 +107,6 @@ int isStackPairwiseConsecutive(Stack *s)
 	if (isEmptyStack(s) || s->ll.size % 2 != 0){
 		return 0;
 	}
-	Stack tempS;
-	tempS.ll.head = NULL;
-	tempS.ll.size = 0;
 
 	while (!isEmptyStack(s))
 	{

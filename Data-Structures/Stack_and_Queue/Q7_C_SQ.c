@@ -105,6 +105,13 @@ int main()
 int balanced(char *expression)
 {
 /* add your code here */
+	Stack s;
+	s.ll.head = NULL;
+	s.ll.size =0;
+	int i = 0;
+	if (!isEmptyStack || expression[i]);
+	
+
 }
 
 ////////////////////////////////////////////////////////////

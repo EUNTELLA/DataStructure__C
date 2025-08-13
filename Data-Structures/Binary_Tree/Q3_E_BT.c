@@ -102,6 +102,13 @@ int countOneChildNodes(BTNode *node)
 
 {
     /* add your code here */
+    if (node == NULL)
+        return 0;
+    
+    else if 
+
+        return;
+    else return; 
 }
 
 ///////////////////////////////////////////////////////////////////////////////////

@@ -125,9 +125,9 @@ void reverse(Queue *q)
 		int ppre = dequeue(q);
 		push(&s,ppre);
 	}
+
 	while (!isEmptyStack(&s))
 	{
-
 		int pre = pop(&s);
 		enqueue(q, pre);
 	}
