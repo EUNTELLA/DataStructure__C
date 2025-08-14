@@ -106,6 +106,16 @@ int main()
 void printSmallerValues(BTNode *node, int m)
 {
 	/* add your code here */
+    if(!node){
+        return ;
+    }
+
+    if (m > node->item){
+        printf("%d ",node -> item);
+    }
+    printSmallerValues(node -> left,m);
+    printSmallerValues(node->right,m);
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////

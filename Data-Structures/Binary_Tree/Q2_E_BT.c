@@ -92,6 +92,7 @@ int main()
     return 0;
 }
 
+
 //////////////////////////////////////////////////////////////////////////////////
 
 int maxHeight(BTNode *node)
@@ -104,9 +105,11 @@ int maxHeight(BTNode *node)
     int leftHeight = maxHeight(node->left);
     int rightHeight = maxHeight(node->right);
 
-    return 1+ (leftHeight > rightHeight ? leftHeight : rightHeight);
-    //leftHeight 가 rightHeight 보다 크면 leftHeight 를 아니면 rightHeight를 선택
-    
+    if (leftHeight > rightHeight){
+        return 1 + leftHeight;
+    } else{
+        return 1 + rightHeight;
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
